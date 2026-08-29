@@ -1,0 +1,41 @@
+name: Closetry
+options:
+  bundleIdPrefix: com.closetry
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "16.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    DEVELOPMENT_TEAM: ""
+    INFOPLIST_KEY_UILaunchScreen_Generation: true
+    INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+    INFOPLIST_KEY_CFBundleDisplayName: Closetry
+    SWIFT_EMIT_LOC_STRINGS: "YES"
+    GENERATE_INFOPLIST_FILE: "YES"
+
+targets:
+  Closetry:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: Closetry
+        excludes:
+          - "Preview Content"
+    resources:
+      - path: Closetry/Assets.xcassets
+      - path: Closetry/Preview Content
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.closetry.app
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: true
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: true
+        INFOPLIST_KEY_UIStatusBarStyle: ""
+        INFOPLIST_KEY_NSCameraUsageDescription: "Closetry needs camera access to photograph your clothing items"
+        INFOPLIST_KEY_NSPhotoLibraryUsageDescription: "Closetry needs photo library access to add clothing photos to your wardrobe"
+        SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
+        SUPPORTS_MACCATALYST: false
+        TARGETED_DEVICE_FAMILY: "1"
